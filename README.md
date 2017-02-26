@@ -4,8 +4,7 @@ Blef - gra karciana
 ## Dystans do siebie jest konieczny w tym projekcie
 
 ##Cel
-konkurs Daj Się Poznać
-zaimplementowanie prostej gdy karcianej, tak aby można pisać własne boty. W grupie znajomych uznaliśmy, że może być całkiem wesoło, aby zamiast grać, pisać boty który będą grały za nas.
+Wzięcie udziału w konkursie Daj Się Poznać. Zaimplementowanie prostej gdy karcianej, tak aby można pisać własne boty. W grupie znajomych uznaliśmy, że może być całkiem wesoło, aby zamiast grać, pisać boty który będą grały za nas.
 
 
 ##Założenia niefunkcjonalne
