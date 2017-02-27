@@ -15,7 +15,7 @@ Wzięcie udziału w konkursie Daj Się Poznać. Zaimplementowanie prostej gdy ka
 - SignalR
 - Najlepsze dashboardy na rynku, i tak nie dojdziemy do konsensusu w kwestii który Framework FE jest najlepszy, więc będzie dużo różnych sexy dashboardów.
 
-##Piersze taski (MVP)
+##Pierwsze taski (MVP)
 - logika kolejności układów -> sprawdzanie układów
 - jeden klient się rejestruje, gra z "kompem".
 - komenda z servera do clienta, GetMove(...)?
