@@ -14,3 +14,14 @@ Wzięcie udziału w konkursie Daj Się Poznać. Zaimplementowanie prostej gdy ka
 - ASP.NET
 - SignalR
 - Najlepsze dashboardy na rynku, i tak nie dojdziemy do konsensusu w kwestii który Framework FE jest najlepszy, więc będzie dużo różnych sexy dashboardów.
+
+##Piersze taski (MVP)
+- logika kolejności układów -> sprawdzanie układów
+- jeden klient się rejestruje, gra z "kompem".
+- komenda z servera do clienta, GetMove(...)?
+- algorytm:
+  - dummy algorytm, ten sam w kliencie i w serwerze grającym jako AI.
+  - algorytm losowo albo podbija o jeden, albo sprawdza.
+- wygrany/przegrany, następna gra z nowymi kartami.
+
+- Po starcie serwera pokazanie strony z info (aby developer wiedział że Server działa).
