@@ -41,5 +41,16 @@ namespace Blef.GameLogic.Tests.PokerHands
 
             Assert.True(isOnTable);
         }
+
+        [Fact]
+        public void When_comparing_better_hand_to_worse_hand_then_result_is_bigger_than_zero()
+        {
+            HighCard betterHand = new HighCard(Card.Jack);
+            HighCard worseHand = new HighCard(Card.Nine);
+
+            int result = betterHand.CompareTo(worseHand);
+
+            Assert.True(result > 0);
+        }
     }
 }
