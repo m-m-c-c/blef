@@ -23,9 +23,9 @@ namespace Blef.GameLogic.PokerHands
             return 1;
         }
 
-        protected override short GetInnerRank()
+        protected override int GetInnerRank()
         {
-            return (short)Card.Rank;
+            return (int)Card.Rank;
         }
     }
 }

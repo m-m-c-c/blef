@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Blef.GameLogic.PokerHands
 {
-    public abstract class PokerHand
+    public abstract class PokerHand : IComparable<PokerHand>
     {
         public abstract bool IsOnTable(IEnumerable<Card> cards);
 
@@ -13,7 +14,7 @@ namespace Blef.GameLogic.PokerHands
         /// </summary>
         protected abstract short GetRank();
 
-        protected abstract short GetInnerRank();
+        protected abstract int GetInnerRank();
 
         public int CompareTo(PokerHand value)
         {
