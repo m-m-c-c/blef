@@ -16,5 +16,10 @@ namespace Blef.GameLogic.PokerHands
         {
             return cards.Contains(Card);
         }
+
+        public override short GetRank()
+        {
+            return 1;
+        }
     }
 }
