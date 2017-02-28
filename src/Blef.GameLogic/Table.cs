@@ -15,7 +15,7 @@ namespace Blef.GameLogic
 
         public bool IsPokerHandOnTable(PokerHand pokerHand)
         {
-            IEnumerable<Card> allCardsOnTable = PlayerHands.SelectMany(x => x.Cards);
+            IEnumerable<Rank> allCardsOnTable = PlayerHands.SelectMany(x => x.Cards);
 
             return pokerHand.IsOnTable(allCardsOnTable);
         }

@@ -4,11 +4,11 @@ namespace Blef.GameLogic
 {
     public class PlayerHand
     {
-        public PlayerHand(IEnumerable<Card> cards)
+        public PlayerHand(IEnumerable<Rank> cards)
         {
             Cards = cards;
         }
 
-        public IEnumerable<Card> Cards { get; }
+        public IEnumerable<Rank> Cards { get; }
     }
 }

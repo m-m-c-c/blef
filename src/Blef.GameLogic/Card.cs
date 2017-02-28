@@ -1,12 +1,14 @@
-﻿namespace Blef.GameLogic
+namespace Blef.GameLogic
 {
-    public enum Card
+    public class Card
     {
-        Nine,
-        Ten,
-        Jack,
-        Queen,
-        King,
-        Ace
+        private readonly Rank rank;
+        private readonly Suit suit;
+
+        public Card(Rank rank, Suit suit)
+        {
+            this.rank = rank;
+            this.suit = suit;
+        }
     }
 }
