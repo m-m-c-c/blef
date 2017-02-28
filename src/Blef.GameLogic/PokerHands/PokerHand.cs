@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Blef.GameLogic.PokerHands
 {
@@ -19,10 +18,12 @@ namespace Blef.GameLogic.PokerHands
 
             if (result == 0)
             {
-                throw new NotImplementedException();                
+                return CompareToWithinSameRank(value);
             }
 
             return result;
         }
-   }
+
+        public abstract int CompareToWithinSameRank(PokerHand value);
+    }
 }
