@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Blef.GameLogic.PokerHands
 {
@@ -11,5 +12,17 @@ namespace Blef.GameLogic.PokerHands
         /// where "wysoka karta" <see cref="HighCard"/> is starting at 1
         /// </summary>
         public abstract short GetRank();
+
+        public int CompareTo(PokerHand value)
+        {
+            int result = GetRank() - value.GetRank();
+
+            if (result == 0)
+            {
+                throw new NotImplementedException();                
+            }
+
+            return result;
+        }
    }
 }
