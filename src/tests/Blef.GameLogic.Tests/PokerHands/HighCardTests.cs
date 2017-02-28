@@ -9,9 +9,9 @@ namespace Blef.GameLogic.Tests.PokerHands
         [Fact]
         public void Given_table_without_high_card_Then_result_is_False()
         {
-            HighCard highCard = new HighCard(Rank.Jack);
+            HighCard highCard = new HighCard(new Card(Rank.Jack, Suit.Clubs));
 
-            IEnumerable<Rank> cardsOnTable = new[] { Rank.Ace };
+            IEnumerable<Card> cardsOnTable = new[] { new Card(Rank.Ace, Suit.Clubs) };
 
             bool isOnTable = highCard.IsOnTable(cardsOnTable);
 
@@ -21,9 +21,9 @@ namespace Blef.GameLogic.Tests.PokerHands
         [Fact]
         public void Given_table_with_high_card_Then_result_is_True()
         {
-            HighCard highCard = new HighCard(Rank.Jack);
+            HighCard highCard = new HighCard(new Card(Rank.Jack, Suit.Diamonds));
 
-            IEnumerable<Rank> cardsOnTable = new[] { Rank.Jack };
+            IEnumerable<Card> cardsOnTable = new[] { new Card(Rank.Jack, Suit.Diamonds) };
 
             bool isOnTable = highCard.IsOnTable(cardsOnTable);
 
@@ -33,9 +33,14 @@ namespace Blef.GameLogic.Tests.PokerHands
         [Fact]
         public void Given_table_with_many_high_cards_Then_result_is_True()
         {
-            HighCard highCard = new HighCard(Rank.Jack);
+            HighCard highCard = new HighCard(new Card(Rank.Jack, Suit.Diamonds));
 
-            IEnumerable<Rank> cardsOnTable = new[] { Rank.Jack, Rank.Jack, Rank.Ace };
+            IEnumerable<Card> cardsOnTable = new[]
+            {
+                new Card(Rank.Jack, Suit.Diamonds),
+                new Card(Rank.Jack, Suit.Clubs),
+                new Card(Rank.Ace, Suit.Diamonds)
+            };
 
             bool isOnTable = highCard.IsOnTable(cardsOnTable);
 
@@ -45,8 +50,8 @@ namespace Blef.GameLogic.Tests.PokerHands
         [Fact]
         public void When_comparing_better_hand_to_worse_hand_then_result_is_bigger_than_zero()
         {
-            HighCard betterHand = new HighCard(Rank.Jack);
-            HighCard worseHand = new HighCard(Rank.Nine);
+            HighCard betterHand = new HighCard(new Card(Rank.Jack, Suit.Diamonds));
+            HighCard worseHand = new HighCard(new Card(Rank.Nine, Suit.Diamonds));
 
             int result = betterHand.CompareTo(worseHand);
 

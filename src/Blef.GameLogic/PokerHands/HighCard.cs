@@ -6,16 +6,16 @@ namespace Blef.GameLogic.PokerHands
 {
     public class HighCard : PokerHand
     {
-        public HighCard(Rank rank)
+        public Card Card { get; private set; }
+
+        public HighCard(Card card)
         {
-            Rank = rank;
+            Card = card;
         }
 
-        public Rank Rank { get; }
-
-        public override bool IsOnTable(IEnumerable<Rank> cards)
+        public override bool IsOnTable(IEnumerable<Card> cards)
         {
-            return cards.Contains(Rank);
+            return cards.Contains(Card);
         }
 
         public override short GetRank()
@@ -32,7 +32,7 @@ namespace Blef.GameLogic.PokerHands
                 throw new InvalidOperationException($"Can compare only {nameof(PokerHand)} with the same rank");
             }
 
-            return Rank - highCard.Rank;
+            return Card.Rank - highCard.Card.Rank;
         }
     }
 }

@@ -4,7 +4,7 @@ namespace Blef.GameLogic.PokerHands
 {
     public abstract class PokerHand
     {
-        public abstract bool IsOnTable(IEnumerable<Rank> cards);
+        public abstract bool IsOnTable(IEnumerable<Card> cards);
 
         /// <summary>
         /// Ranks should be assigned according to <see href="https://pl.wikipedia.org/wiki/Blef_(gra)"/> 
