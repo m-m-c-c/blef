@@ -11,5 +11,19 @@ namespace Blef.GameLogic.PokerHands
         /// where "wysoka karta" <see cref="HighCard"/> is starting at 1
         /// </summary>
         public abstract short GetRank();
-   }
+
+        public int CompareTo(PokerHand value)
+        {
+            int result = GetRank() - value.GetRank();
+
+            if (result == 0)
+            {
+                return CompareToWithinSameRank(value);
+            }
+
+            return result;
+        }
+
+        public abstract int CompareToWithinSameRank(PokerHand value);
+    }
 }
