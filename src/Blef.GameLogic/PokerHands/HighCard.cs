@@ -5,12 +5,12 @@
     /// </summary>
     public class HighCard : PokerHand
     {
-        public override PokerHandHierarchy CompareWith(PokerHand otherPokerHand)
+        public override bool IsOnTable(Table table)
         {
             throw new System.NotImplementedException();
         }
 
-        public override bool IsOnTable(Table table)
+        public override bool IsStrongerThan(PokerHand otherPokerHand)
         {
             throw new System.NotImplementedException();
         }
