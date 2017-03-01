@@ -5,6 +5,13 @@
     /// </summary>
     public class Pair : PokerHand
     {
+        private readonly Rank rank;
+
+        public Pair(Rank rank)
+        {
+            this.rank = rank;
+        }
+
         public override PokerHandHierarchy CompareWith(PokerHand otherPokerHand)
         {
             throw new System.NotImplementedException();
