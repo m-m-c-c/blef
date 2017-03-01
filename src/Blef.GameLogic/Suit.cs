@@ -2,9 +2,9 @@ namespace Blef.GameLogic
 {
     public enum Suit
     {
-        Diamonds,
-        Hearts,
-        Clubs,
-        Spades 
+        Diamonds, //dzwonek, karo
+        Hearts, //czerwa, kier
+        Spades, //wina, pik
+        Clubs //krajc, trefl
     }
 }

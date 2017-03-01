@@ -56,6 +56,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PokerHands\CardCompareTester.cs" />
     <Compile Include="PokerHands\HighCardOnTableTester.cs" />
     <Compile Include="PokerHands\HightCardComaringTester.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

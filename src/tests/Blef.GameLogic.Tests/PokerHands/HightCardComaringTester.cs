@@ -1,4 +1,5 @@
-﻿using Blef.GameLogic.PokerHands;
+﻿using System.Xml.Serialization;
+using Blef.GameLogic.PokerHands;
 using Xunit;
 
 namespace Blef.GameLogic.Tests.PokerHands

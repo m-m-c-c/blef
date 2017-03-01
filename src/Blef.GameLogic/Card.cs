@@ -1,6 +1,9 @@
+using System;
+using System.Collections.Generic;
+
 namespace Blef.GameLogic
 {
-    public class Card
+    public class Card : IComparable<Card>
     {
         public Rank Rank { get; }
         public Suit Suit { get; }
@@ -49,6 +52,21 @@ namespace Blef.GameLogic
             }
 
             return (Rank == other.Rank) && (Suit == other.Suit);
+        }
+
+        public int CompareTo(Card other)
+        {
+            if (ReferenceEquals(this, other))
+                return 0;
+
+            if (ReferenceEquals(null, other))
+                return 1;
+
+            var rankComparison = Rank.CompareTo(other.Rank);
+            if (rankComparison != 0)
+                return rankComparison;
+
+            return Suit.CompareTo(other.Suit);
         }
     }
 }
