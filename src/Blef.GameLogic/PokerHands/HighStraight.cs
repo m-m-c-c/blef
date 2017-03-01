@@ -5,6 +5,13 @@
     /// </summary>
     public class HighStraight : PokerHand
     {
+        private readonly Card card;
+
+        public HighStraight(Card card)
+        {
+            this.card = card;
+        }
+
         public override PokerHandHierarchy CompareWith(PokerHand otherPokerHand)
         {
             throw new System.NotImplementedException();
