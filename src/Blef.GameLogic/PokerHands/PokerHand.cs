@@ -2,14 +2,7 @@
 {
     public abstract class PokerHand
     {
-        public abstract PokerHandHierarchy CompareWith(PokerHand otherPokerHand);
         public abstract bool IsOnTable(Table table);
-    }
-
-    public enum PokerHandHierarchy
-    {
-        Lower,
-        Equal,
-        Higher
+        public abstract bool IsStrongerThan(PokerHand otherPokerHand);
     }
 }
