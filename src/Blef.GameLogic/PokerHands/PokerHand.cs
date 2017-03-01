@@ -2,6 +2,14 @@
 {
     public abstract class PokerHand
     {
-        // derived classes has logic
+        public abstract PokerHandHierarchy CompareWith(PokerHand otherPokerHand);
+        public abstract bool IsOnTable(Table table);
+    }
+
+    public enum PokerHandHierarchy
+    {
+        Lower,
+        Equal,
+        Higher
     }
 }
