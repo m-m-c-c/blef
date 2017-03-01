@@ -1,4 +1,6 @@
-﻿namespace Blef.GameLogic.PokerHands
+﻿using System.Linq;
+
+namespace Blef.GameLogic.PokerHands
 {
     /// <summary>
     /// Kareta
@@ -14,7 +16,7 @@
 
         public override bool IsOnTable(Table table)
         {
-            throw new System.NotImplementedException();
+            return table.GetAllCards().Count(x => x.Rank == rank) == 4;
         }
 
         public override bool IsStrongerThan(PokerHand otherPokerHand)

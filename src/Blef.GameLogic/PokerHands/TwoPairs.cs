@@ -1,4 +1,6 @@
-﻿namespace Blef.GameLogic.PokerHands
+﻿using System.Linq;
+
+namespace Blef.GameLogic.PokerHands
 {
     /// <summary>
     /// Dwie pary
@@ -16,7 +18,9 @@
 
         public override bool IsOnTable(Table table)
         {
-            throw new System.NotImplementedException();
+            var firstRankCount = table.GetAllCards().Count(x => x.Rank == first);
+            var secondRankCount = table.GetAllCards().Count(x => x.Rank == second);
+            return firstRankCount >= 2 && secondRankCount >= 2;
         }
 
         public override bool IsStrongerThan(PokerHand otherPokerHand)
