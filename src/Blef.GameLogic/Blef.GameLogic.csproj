@@ -48,7 +48,19 @@
     <Compile Include="PlayerChoice.cs" />
     <Compile Include="PlayerHand.cs" />
     <Compile Include="PlayerMove.cs" />
+    <Compile Include="PokerHands\Flush.cs" />
+    <Compile Include="PokerHands\FourOfKind.cs" />
+    <Compile Include="PokerHands\FullHouse.cs" />
+    <Compile Include="PokerHands\HighCard.cs" />
+    <Compile Include="PokerHands\HighStraight.cs" />
+    <Compile Include="PokerHands\HighStraightFlush.cs" />
+    <Compile Include="PokerHands\LowStraightFlush.cs" />
+    <Compile Include="PokerHands\Pair.cs" />
     <Compile Include="PokerHands\PokerHand.cs" />
+    <Compile Include="PokerHands\LowStraight.cs" />
+    <Content Include="PokerHands\!PokerHandHierarchy.txt" />
+    <Compile Include="PokerHands\ThreeOfKind.cs" />
+    <Compile Include="PokerHands\TwoPairs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Table.cs" />
   </ItemGroup>
