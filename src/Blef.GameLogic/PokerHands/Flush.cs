@@ -14,7 +14,7 @@
 
         public override bool IsOnTable(Table table)
         {
-            throw new System.NotImplementedException();
+            return table.HasSuit(suit);
         }
 
         public override bool IsStrongerThan(PokerHand otherPokerHand)

@@ -7,7 +7,11 @@
     {
         public override bool IsOnTable(Table table)
         {
-            throw new System.NotImplementedException();
+            return table.HasRank(Rank.Nine) &&
+                   table.HasRank(Rank.Ten) &&
+                   table.HasRank(Rank.Jack) &&
+                   table.HasRank(Rank.Queen) &&
+                   table.HasRank(Rank.King);
         }
 
         public override bool IsStrongerThan(PokerHand otherPokerHand)
