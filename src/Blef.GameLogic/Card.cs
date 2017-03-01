@@ -2,7 +2,7 @@
 {
     public enum Card
     {
-        Nine,
+        Nine = 1,
         Ten,
         Jack,
         Queen,
