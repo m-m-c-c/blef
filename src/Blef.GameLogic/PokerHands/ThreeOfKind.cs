@@ -2,9 +2,6 @@
 
 namespace Blef.GameLogic.PokerHands
 {
-    /// <summary>
-    /// Trójka
-    /// </summary>
     public class ThreeOfKind : PokerHand
     {
         private readonly Rank rank;

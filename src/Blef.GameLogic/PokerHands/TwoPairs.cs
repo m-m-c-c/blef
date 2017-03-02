@@ -2,9 +2,6 @@
 
 namespace Blef.GameLogic.PokerHands
 {
-    /// <summary>
-    /// Dwie pary
-    /// </summary>
     public class TwoPairs : PokerHand
     {
         private readonly Rank first;

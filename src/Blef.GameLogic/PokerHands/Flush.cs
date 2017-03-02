@@ -1,8 +1,5 @@
 ﻿namespace Blef.GameLogic.PokerHands
 {
-    /// <summary>
-    /// Kolor
-    /// </summary>
     public class Flush : PokerHand
     {
         private readonly Suit suit;

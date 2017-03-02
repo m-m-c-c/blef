@@ -1,8 +1,5 @@
 ﻿namespace Blef.GameLogic.PokerHands
 {
-    /// <summary>
-    /// Duży strit
-    /// </summary>
     public class HighStraight : PokerHand
     {
         public override bool IsOnTable(Table table)

@@ -2,9 +2,6 @@
 
 namespace Blef.GameLogic.PokerHands
 {
-    /// <summary>
-    /// Full
-    /// </summary>
     public class FullHouse : PokerHand
     {
         private readonly Rank first;

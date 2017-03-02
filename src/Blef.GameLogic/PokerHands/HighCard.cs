@@ -1,10 +1,6 @@
-﻿using System.Linq;
-
+﻿
 namespace Blef.GameLogic.PokerHands
 {
-    /// <summary>
-    /// Wysoka karta
-    /// </summary>
     public class HighCard : PokerHand
     {
         private readonly Rank rank;
