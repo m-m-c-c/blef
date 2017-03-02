@@ -48,6 +48,7 @@
     <Compile Include="Player.cs" />
     <Compile Include="PlayerBet.cs" />
     <Compile Include="PlayerChoice.cs" />
+    <Compile Include="PlayerClients\DummyPlayerClient.cs" />
     <Compile Include="PlayerHand.cs" />
     <Compile Include="PlayerMove.cs" />
     <Compile Include="PokerHandsGenerator.cs" />
