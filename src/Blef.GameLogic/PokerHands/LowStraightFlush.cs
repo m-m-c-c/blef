@@ -5,10 +5,12 @@ namespace Blef.GameLogic.PokerHands
 {
     public class LowStraightFlush : PokerHand
     {
+        private readonly Suit suit;
         private readonly IReadOnlyCollection<Card> cards;
 
         public LowStraightFlush(Suit suit)
         {
+            this.suit = suit;
             cards = new List<Card>()
             {
                 new Card(Rank.Nine,  suit),
@@ -24,9 +26,7 @@ namespace Blef.GameLogic.PokerHands
             return cards.All(table.HasCard);
         }
 
-        public override bool IsStrongerThan(PokerHand otherPokerHand)
-        {
-            throw new System.NotImplementedException();
-        }
+        protected override int Value => 100000000 * GetSuitValue(suit);
+
     }
 }

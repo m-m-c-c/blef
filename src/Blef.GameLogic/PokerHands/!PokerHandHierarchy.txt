@@ -1,11 +1,11 @@
-﻿HighStraightFlush - duży poker (kolor) 
-LowStraightFlush -  mały poker (kolor)
-FourOfKind - kareta (wartość)
-Flush - kolor (kolor)
-FullHouse - full (wartość, wartość)
-ThreeOfKind - trójka (wartość)
-HighStraight - duży strit
-LowStraight - mały strit
-TwoPairs - dwie pary (wartość, wartość)
-Pair - para (wartość)
-HighCard - wysoka karta (wartość)
+﻿HighStraightFlush - duży poker (kolor) 1 000 000 000 *S
+LowStraightFlush -  mały poker (kolor) 100 000 000 *S
+FourOfKind - kareta (wartość) 10 000 000 *R
+Flush - kolor (kolor) 1 000 000 * S
+FullHouse - full (wartość, wartość) 100 000 + 10R1 +R2
+ThreeOfKind - trójka (wartość) 10 000 + R
+HighStraight - duży strit 5 000
+LowStraight - mały strit 1 000
+TwoPairs - dwie pary (wartość, wartość) 100 + R1 + R2
+Pair - para (wartość) 10R
+HighCard - wysoka karta (wartość) R
