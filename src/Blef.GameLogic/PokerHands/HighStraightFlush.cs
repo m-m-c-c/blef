@@ -3,9 +3,6 @@ using System.Linq;
 
 namespace Blef.GameLogic.PokerHands
 {
-    /// <summary>
-    /// Duży poker
-    /// </summary>
     public class HighStraightFlush:PokerHand
     {
         private readonly Suit suit;
