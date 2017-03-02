@@ -19,9 +19,6 @@ namespace Blef.GameLogic.PokerHands
             return table.HasRank(rank);
         }
 
-        public override bool IsStrongerThan(PokerHand otherPokerHand)
-        {
-            throw new System.NotImplementedException();
-        }
+        protected override int Value => GetRankValue(rank);
     }
 }

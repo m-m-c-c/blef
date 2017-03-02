@@ -14,9 +14,7 @@
                    table.HasRank(Rank.King);
         }
 
-        public override bool IsStrongerThan(PokerHand otherPokerHand)
-        {
-            throw new System.NotImplementedException();
-        }
+        protected override int Value => 1000;
+
     }
 }

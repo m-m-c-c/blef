@@ -23,9 +23,8 @@ namespace Blef.GameLogic.PokerHands
             return firstRankCount >= 2 && secondRankCount >= 2;
         }
 
-        public override bool IsStrongerThan(PokerHand otherPokerHand)
-        {
-            throw new System.NotImplementedException();
-        }
+        protected override int Value => 100 + GetRankValue(first) + GetRankValue(second);
+
+
     }
 }

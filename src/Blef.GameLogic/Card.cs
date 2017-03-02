@@ -14,7 +14,7 @@
 
     public enum Rank
     {
-        Nine,
+        Nine=1,
         Ten,
         Jack,
         Queen,
@@ -24,7 +24,7 @@
 
     public enum Suit
     {
-        Diamonds,
+        Diamonds=1,
         Hearts,
         Clubs,
         Spades
