@@ -50,6 +50,7 @@
     <Compile Include="PlayerChoice.cs" />
     <Compile Include="PlayerHand.cs" />
     <Compile Include="PlayerMove.cs" />
+    <Compile Include="PokerHandsGenerator.cs" />
     <Compile Include="PokerHands\Flush.cs" />
     <Compile Include="PokerHands\FourOfKind.cs" />
     <Compile Include="PokerHands\FullHouse.cs" />
