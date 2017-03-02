@@ -5,13 +5,6 @@
     /// </summary>
     public class HighStraight : PokerHand
     {
-        private readonly Card card;
-
-        public HighStraight(Card card)
-        {
-            this.card = card;
-        }
-
         public override bool IsOnTable(Table table)
         {
             return table.HasRank(Rank.Ten) &&
