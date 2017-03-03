@@ -11,6 +11,12 @@
                table.HasRank(Rank.Ace);
         }
 
-        protected override int Value => 5000;
+        protected override int PokerHandRank => 5;
+
+        protected override int GetInnerRank()
+        {
+            // It is not important for this kind of PokerHand
+            return 0;
+        }
     }
 }
