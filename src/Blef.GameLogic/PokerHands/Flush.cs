@@ -14,6 +14,11 @@
             return table.HasSuit(suit);
         }
 
-        protected override int Value => 1000000 * GetSuitValue(suit);
+        protected override int GenericPokerHand => 8;
+
+        protected override int CompareWithinSameGenericPokerHand(PokerHand otherPokerHand)
+        {
+            return 0;
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace Blef.GameLogic.Tests.PokerHands
             TwoPairs A9 = new TwoPairs(Rank.Ace, Rank.Nine);
             TwoPairs KQ = new TwoPairs(Rank.King, Rank.Queen);
 
-            Assert.True(A9.IsStrongerThan(KQ));
+            Assert.True(A9.CompareWith(KQ) > 0);
         }
     }
 }

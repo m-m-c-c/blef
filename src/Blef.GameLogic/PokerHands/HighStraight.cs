@@ -11,6 +11,11 @@
                table.HasRank(Rank.Ace);
         }
 
-        protected override int Value => 5000;
+        protected override int GenericPokerHand => 5;
+
+        protected override int CompareWithinSameGenericPokerHand(PokerHand otherPokerHand)
+        {
+            return 0;
+        }
     }
 }
