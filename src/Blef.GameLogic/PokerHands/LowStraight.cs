@@ -13,5 +13,9 @@
 
         protected override int Value => 1000;
 
+        public override string ToString()
+        {
+            return $"LowStraight";
+        }
     }
 }

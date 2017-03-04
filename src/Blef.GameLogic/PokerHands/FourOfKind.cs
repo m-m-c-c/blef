@@ -17,5 +17,10 @@ namespace Blef.GameLogic.PokerHands
         }
 
         protected override int Value => 10000000 * GetRankValue(rank);
+
+        public override string ToString()
+        {
+            return $"FourOfKind of {rank}";
+        }
     }
 }

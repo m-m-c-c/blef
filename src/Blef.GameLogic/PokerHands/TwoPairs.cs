@@ -22,6 +22,9 @@ namespace Blef.GameLogic.PokerHands
 
         protected override int Value => 100 + GetRankValue(first) + GetRankValue(second);
 
-
+        public override string ToString()
+        {
+            return $"TwoPairs od {first} and {second}";
+        }
     }
 }

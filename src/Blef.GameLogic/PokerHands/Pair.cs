@@ -17,5 +17,10 @@ namespace Blef.GameLogic.PokerHands
         }
 
         protected override int Value => 10 * GetRankValue(rank);
+
+        public override string ToString()
+        {
+            return $"Pair of {rank}";
+        }
     }
 }

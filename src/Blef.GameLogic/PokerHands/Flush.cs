@@ -15,5 +15,10 @@
         }
 
         protected override int Value => 1000000 * GetSuitValue(suit);
+
+        public override string ToString()
+        {
+            return $"Flush of {suit}";
+        }
     }
 }
