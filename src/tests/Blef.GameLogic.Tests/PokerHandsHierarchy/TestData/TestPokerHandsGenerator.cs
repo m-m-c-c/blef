@@ -46,7 +46,8 @@ namespace Blef.GameLogic.Tests.TestData
         {
             foreach (var rank1 in AllRanksByHierarchy)
                 foreach (var rank2 in AllRanksByHierarchy)
-                    yield return new FullHouse(rank1, rank2);
+                    if(rank1!=rank2)
+                        yield return new FullHouse(rank1, rank2);
         }
 
         public static IEnumerable<PokerHand> GenerateAllFlushesByHierarchy()
