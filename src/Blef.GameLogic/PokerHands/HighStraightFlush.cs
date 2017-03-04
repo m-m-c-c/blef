@@ -27,5 +27,11 @@ namespace Blef.GameLogic.PokerHands
         }
 
         protected override long Value => 1000000000 * GetSuitValue(suit);
+
+
+        public override string ToString()
+        {
+            return $"HighStraightFlush of {suit}";
+        }
     }
 }

@@ -12,5 +12,10 @@
         }
 
         protected override long Value => 5000;
+
+        public override string ToString()
+        {
+            return $"HighStraight";
+        }
     }
 }

@@ -16,5 +16,10 @@ namespace Blef.GameLogic.PokerHands
         }
 
         protected override long Value => GetRankValue(rank);
+
+        public override string ToString()
+        {
+            return $"HighCard of {rank}";
+        }
     }
 }

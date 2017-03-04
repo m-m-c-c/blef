@@ -21,5 +21,10 @@ namespace Blef.GameLogic.PokerHands
         }
 
         protected override long Value => 100000 + 10 * GetRankValue(first) +  GetRankValue(second);
+
+        public override string ToString()
+        {
+            return $"FullHouse of {first} and {second}";
+        }
     }
 }
