@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 
 namespace Blef.GameLogic.PokerHands
 {
@@ -20,11 +21,18 @@ namespace Blef.GameLogic.PokerHands
             return firstRankCount >= 2 && secondRankCount >= 2;
         }
 
-        protected override long Value => 100 + GetRankValue(first) + GetRankValue(second);
+        protected override long Value
+        {
+            get
+            {
+                var sortedRankValues = new[] {GetRankValue(first), GetRankValue(second)}.OrderBy(x => x).ToArray();
+                return 100 + 10 * sortedRankValues[1] + sortedRankValues[0];
+            }
+        }
 
         public override string ToString()
         {
-            return $"TwoPairs od {first} and {second}";
+            return $"TwoPairs of {first} and {second}";
         }
     }
 }
