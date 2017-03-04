@@ -31,7 +31,6 @@ namespace Blef.GameLogic.Tests
         }
 
        [Test]
-       [Pairwise]
         public void should_be_able_to_tell_that_highcard_is_presence_when_there_is_a_single_card_on_the_table(
            [Values(Rank.Nine, Rank.Ten, Rank.Jack, Rank.Queen, Rank.King, Rank.Ace)]Rank highCardRank, 
            [Values(Suit.Clubs, Suit.Diamonds, Suit.Hearts, Suit.Spades)]Suit suit)
