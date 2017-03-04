@@ -20,6 +20,6 @@ namespace Blef.GameLogic.PokerHands
             return firstRankCount >= 3 && secondRankCount >= 2;
         }
 
-        protected override int Value => 100000 + 10 * GetRankValue(first) +  GetRankValue(second);
+        protected override long Value => 100000 + 10 * GetRankValue(first) +  GetRankValue(second);
     }
 }

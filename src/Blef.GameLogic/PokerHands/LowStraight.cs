@@ -11,7 +11,7 @@
                    table.HasRank(Rank.King);
         }
 
-        protected override int Value => 1000;
+        protected override long Value => 1000;
 
     }
 }

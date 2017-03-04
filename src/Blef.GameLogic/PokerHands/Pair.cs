@@ -16,6 +16,6 @@ namespace Blef.GameLogic.PokerHands
             return table.GetAllCards().Count(x => x.Rank == rank) >= 2;
         }
 
-        protected override int Value => 10 * GetRankValue(rank);
+        protected override long Value => 10 * GetRankValue(rank);
     }
 }

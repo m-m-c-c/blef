@@ -11,6 +11,6 @@
                table.HasRank(Rank.Ace);
         }
 
-        protected override int Value => 5000;
+        protected override long Value => 5000;
     }
 }

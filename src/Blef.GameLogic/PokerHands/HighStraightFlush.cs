@@ -26,6 +26,6 @@ namespace Blef.GameLogic.PokerHands
             return cards.All(table.HasCard);
         }
 
-        protected override int Value => 1000000000 * GetSuitValue(suit);
+        protected override long Value => 1000000000 * GetSuitValue(suit);
     }
 }
