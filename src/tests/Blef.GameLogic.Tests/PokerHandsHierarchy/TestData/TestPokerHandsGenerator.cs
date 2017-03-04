@@ -21,7 +21,10 @@ namespace Blef.GameLogic.Tests.TestData
 
         public static IEnumerable<PokerHand> GenerateAllTwoPairsByHierarchy()
         {
-            foreach (var rank in AllRanksByHierarchy) yield return new TwoPairs(rank, rank);
+            foreach (var rank1 in AllRanksByHierarchy)
+                foreach (var rank2 in AllRanksByHierarchy)
+                    if(rank2 < rank1)
+                        yield return new TwoPairs(rank1, rank2);
         }
 
         public static IEnumerable<PokerHand> GenerateAllLowStraights()
