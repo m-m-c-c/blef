@@ -81,7 +81,7 @@ namespace Blef.GameLogic.Tests.TestData
             }
         }
 
-        private static readonly IReadOnlyList<PokerHand> AllPokerHandsByHierarchy =
+        private static readonly IEnumerable<PokerHand> AllPokerHandsByHierarchy =
             GeneratePokerHands(
                 GenerateAllHighCardsByHierarchy(),
                 GenerateAllPairsByHierarchy(),
@@ -94,16 +94,21 @@ namespace Blef.GameLogic.Tests.TestData
                 GenerateAllFourOfKindsByHierarchy(),
                 GenerateLowStraightFlushesByHierarchy(),
                 GenerateHighStraightFlushesByHierarchy()
-            ).ToList();
+            );
 
         public static IEnumerable<object[]> GeneratePokerHandsMatrix()
         {
-            for (int i = 0; i < AllPokerHandsByHierarchy.Count; i++)
+            var i = 0;
+            foreach (var first in AllPokerHandsByHierarchy)
             {
-                for (int j = 0; j < AllPokerHandsByHierarchy.Count; j++)
+                var j = 0;
+                foreach (var second in AllPokerHandsByHierarchy)
                 {
-                    yield return new object[] {i, j, AllPokerHandsByHierarchy[i], AllPokerHandsByHierarchy[j]};
+                    yield return new object[] { i, j, first, second };
+                    j++;
                 }
+                i++;
+
             }
         }
     }
