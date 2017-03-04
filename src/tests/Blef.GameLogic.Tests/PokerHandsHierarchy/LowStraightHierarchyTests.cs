@@ -10,12 +10,12 @@ namespace Blef.GameLogic.Tests
         public static IEnumerable<PokerHand> StrongerThanLowStraight =
             TestPokerHandsGenerator.GeneratePokerHands(
                 TestPokerHandsGenerator.GenerateAllHighStraights(),
-                TestPokerHandsGenerator.GenerateAllThreeOfKind(),
-                TestPokerHandsGenerator.GenerateAllFullHouses(),
-                TestPokerHandsGenerator.GenerateAllFlushes(),
-                TestPokerHandsGenerator.GenerateAllFourOfKinds(),
-                TestPokerHandsGenerator.GenerateLowStraightFlushes(),
-                TestPokerHandsGenerator.GenerateHighStraightFlushes()
+                TestPokerHandsGenerator.GenerateAllThreeOfKindByHierarchy(),
+                TestPokerHandsGenerator.GenerateAllFullHousesByHierarchy(),
+                TestPokerHandsGenerator.GenerateAllFlushesByHierarchy(),
+                TestPokerHandsGenerator.GenerateAllFourOfKindsByHierarchy(),
+                TestPokerHandsGenerator.GenerateLowStraightFlushesByHierarchy(),
+                TestPokerHandsGenerator.GenerateHighStraightFlushesByHierarchy()
             );
 
 

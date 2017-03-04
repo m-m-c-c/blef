@@ -11,12 +11,12 @@ namespace Blef.GameLogic.Tests
             TestPokerHandsGenerator.GeneratePokerHands(
                 TestPokerHandsGenerator.GenerateAllLowStraights(),
                 TestPokerHandsGenerator.GenerateAllHighStraights(),
-                TestPokerHandsGenerator.GenerateAllThreeOfKind(),
-                TestPokerHandsGenerator.GenerateAllFullHouses(),
-                TestPokerHandsGenerator.GenerateAllFlushes(),
-                TestPokerHandsGenerator.GenerateAllFourOfKinds(),
-                TestPokerHandsGenerator.GenerateLowStraightFlushes(),
-                TestPokerHandsGenerator.GenerateHighStraightFlushes()
+                TestPokerHandsGenerator.GenerateAllThreeOfKindByHierarchy(),
+                TestPokerHandsGenerator.GenerateAllFullHousesByHierarchy(),
+                TestPokerHandsGenerator.GenerateAllFlushesByHierarchy(),
+                TestPokerHandsGenerator.GenerateAllFourOfKindsByHierarchy(),
+                TestPokerHandsGenerator.GenerateLowStraightFlushesByHierarchy(),
+                TestPokerHandsGenerator.GenerateHighStraightFlushesByHierarchy()
             );
 
         [Test]

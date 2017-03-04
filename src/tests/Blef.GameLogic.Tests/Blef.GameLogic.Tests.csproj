@@ -53,6 +53,7 @@
     <Compile Include="PokerHandsHierarchy\LowStraightFlushHierarchyTests.cs" />
     <Compile Include="PokerHandsHierarchy\LowStraightHierarchyTests.cs" />
     <Compile Include="PokerHandsHierarchy\PairHierarchyTests.cs" />
+    <Compile Include="PokerHandsHierarchy\PokerHandHierarchyTest.cs" />
     <Compile Include="PokerHandsHierarchy\ThreeOfKindHierarchyTests.cs" />
     <Compile Include="PokerHandsPresenceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

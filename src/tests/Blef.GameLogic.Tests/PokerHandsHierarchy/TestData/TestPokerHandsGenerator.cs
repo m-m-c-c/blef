@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Blef.GameLogic.PokerHands;
 
 namespace Blef.GameLogic.Tests.TestData
@@ -33,34 +34,34 @@ namespace Blef.GameLogic.Tests.TestData
             yield return new HighStraight();
         }
 
-        public static IEnumerable<PokerHand> GenerateAllThreeOfKind()
+        public static IEnumerable<PokerHand> GenerateAllThreeOfKindByHierarchy()
         {
             foreach (var rank in AllRanksByHierarchy) yield return new ThreeOfKind(rank);
         }
 
-        public static IEnumerable<PokerHand> GenerateAllFullHouses()
+        public static IEnumerable<PokerHand> GenerateAllFullHousesByHierarchy()
         {
             foreach (var rank1 in AllRanksByHierarchy)
                 foreach (var rank2 in AllRanksByHierarchy)
                     yield return new FullHouse(rank1, rank2);
         }
 
-        public static IEnumerable<PokerHand> GenerateAllFlushes()
+        public static IEnumerable<PokerHand> GenerateAllFlushesByHierarchy()
         {
             foreach (var suit in AllSuitsByHierarchy) yield return new Flush(suit);
         }
 
-        public static IEnumerable<PokerHand> GenerateAllFourOfKinds()
+        public static IEnumerable<PokerHand> GenerateAllFourOfKindsByHierarchy()
         {
             foreach (var rank in AllRanksByHierarchy) yield return new FourOfKind(rank);
         }
 
-        public static IEnumerable<PokerHand> GenerateLowStraightFlushes()
+        public static IEnumerable<PokerHand> GenerateLowStraightFlushesByHierarchy()
         {
             foreach (var suit in AllSuitsByHierarchy) yield return new LowStraightFlush(suit);
         }
 
-        public static IEnumerable<PokerHand> GenerateHighStraightFlushes()
+        public static IEnumerable<PokerHand> GenerateHighStraightFlushesByHierarchy()
         {
             foreach (var suit in AllSuitsByHierarchy) yield return new HighStraightFlush(suit);
         }
