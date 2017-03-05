@@ -2,6 +2,8 @@
 {
     public class HighStraight : PokerHand
     {
+        private const int BasicValue = 5000;
+
         public override bool IsOnTable(Table table)
         {
             return table.HasRank(Rank.Ten) &&
@@ -11,6 +13,11 @@
                table.HasRank(Rank.Ace);
         }
 
-        protected override int Value => 5000;
+        protected override long Value => BasicValue;
+
+        public override string ToString()
+        {
+            return $"HighStraight";
+        }
     }
 }

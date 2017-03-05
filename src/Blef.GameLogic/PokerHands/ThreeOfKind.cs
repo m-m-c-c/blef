@@ -4,6 +4,8 @@ namespace Blef.GameLogic.PokerHands
 {
     public class ThreeOfKind : PokerHand
     {
+        private const int BasicValue = 10000;
+
         private readonly Rank rank;
 
         public ThreeOfKind(Rank rank)
@@ -16,6 +18,11 @@ namespace Blef.GameLogic.PokerHands
             return table.GetAllCards().Count(x => x.Rank == rank) >= 3;
         }
 
-        protected override int Value => 10000 + 3* GetRankValue(rank);
+        protected override long Value => BasicValue + GetRankValue(rank);
+
+        public override string ToString()
+        {
+            return $"ThreeOfKind of {rank}";
+        }
     }
 }

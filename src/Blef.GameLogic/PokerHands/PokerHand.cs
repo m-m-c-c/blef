@@ -6,7 +6,7 @@ namespace Blef.GameLogic.PokerHands
     {
         public abstract bool IsOnTable(Table table);
 
-        protected abstract int Value
+        protected abstract long Value
         {
             get;
         }
@@ -16,7 +16,7 @@ namespace Blef.GameLogic.PokerHands
             return this.Value > otherPokerHand.Value;
         }
 
-        protected int GetRankValue(Rank rank)
+        protected long GetRankValue(Rank rank)
         {
             switch (rank)
             {
@@ -37,7 +37,7 @@ namespace Blef.GameLogic.PokerHands
             }
         }
 
-        protected int GetSuitValue(Suit suit)
+        protected long GetSuitValue(Suit suit)
         {
             switch (suit)
             {

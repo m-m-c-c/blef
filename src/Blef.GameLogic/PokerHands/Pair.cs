@@ -4,6 +4,8 @@ namespace Blef.GameLogic.PokerHands
 {
     public class Pair : PokerHand
     {
+        private const int BasicValue = 10;
+
         private readonly Rank rank;
 
         public Pair(Rank rank)
@@ -16,6 +18,12 @@ namespace Blef.GameLogic.PokerHands
             return table.GetAllCards().Count(x => x.Rank == rank) >= 2;
         }
 
-        protected override int Value => 10 * GetRankValue(rank);
+        protected override long Value => BasicValue * GetRankValue(rank);
+
+
+        public override string ToString()
+        {
+            return $"Pair of {rank}";
+        }
     }
 }
