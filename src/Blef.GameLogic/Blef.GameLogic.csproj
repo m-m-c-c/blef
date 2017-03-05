@@ -48,7 +48,7 @@
     <Compile Include="PlayerBet.cs" />
     <Compile Include="PlayerChoice.cs" />
     <Compile Include="PlayerHand.cs" />
-    <Compile Include="PlayerMove.cs" />
+    <Compile Include="PlayerDecision.cs" />
     <Compile Include="PokerHandsGenerator.cs" />
     <Compile Include="PokerHands\Flush.cs" />
     <Compile Include="PokerHands\FourOfKind.cs" />

@@ -2,29 +2,29 @@
 
 namespace Blef.GameLogic
 {
-    public class PlayerMove
+    public class PlayerDecision
     {
         public PlayerChoice Choice { get; set; }
         public PokerHand PokerHand { get; set; }
 
-        public static PlayerMove Check()
+        public static PlayerDecision Check()
         {
-            return new PlayerMove
+            return new PlayerDecision
             {
                 Choice = PlayerChoice.Check
             };
         }
 
-        public static PlayerMove Bet(PokerHand pokerHand)
+        public static PlayerDecision Bet(PokerHand pokerHand)
         {
-            return new PlayerMove
+            return new PlayerDecision
             {
                 Choice = PlayerChoice.Bet,
                 PokerHand = pokerHand
             };
         }
 
-        PlayerMove()
+        PlayerDecision()
         {
         }
     }
