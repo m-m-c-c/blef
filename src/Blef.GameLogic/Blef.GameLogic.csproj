@@ -44,7 +44,6 @@
     <Compile Include="Card.cs" />
     <Compile Include="CardsGenerator.cs" />
     <Compile Include="GameHistory.cs" />
-    <Compile Include="GameHistoryForClient.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PlayerBet.cs" />
     <Compile Include="PlayerChoice.cs" />
