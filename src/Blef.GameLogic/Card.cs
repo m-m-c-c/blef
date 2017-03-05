@@ -24,9 +24,9 @@
 
     public enum Suit
     {
-        Diamonds=1,
+        Spades = 1,
         Hearts,
-        Clubs,
-        Spades
+        Diamonds,
+        Clubs
     }
 }
