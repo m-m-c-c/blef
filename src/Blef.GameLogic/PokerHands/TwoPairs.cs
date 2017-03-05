@@ -10,6 +10,11 @@ namespace Blef.GameLogic.PokerHands
 
         public TwoPairs(Rank first, Rank second)
         {
+            if (first <= second)
+            {
+                throw new ArgumentException($"First pair '{first}' has to be greater than second pair '{second}'");
+            }
+
             this.first = first;
             this.second = second;
         }
