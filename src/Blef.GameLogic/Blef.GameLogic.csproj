@@ -62,6 +62,7 @@
     <Compile Include="PokerHands\Pair.cs" />
     <Compile Include="PokerHands\PokerHand.cs" />
     <Compile Include="PokerHands\LowStraight.cs" />
+    <Compile Include="Utils\StaticRandom.cs" />
     <Content Include="PokerHands\!PokerHandHierarchy.txt" />
     <Compile Include="PokerHands\ThreeOfKind.cs" />
     <Compile Include="PokerHands\TwoPairs.cs" />
