@@ -5,6 +5,8 @@ namespace Blef.GameLogic.PokerHands
 {
     public class LowStraightFlush : PokerHand
     {
+        private const int BasicValue = 100000000;
+
         private readonly Suit suit;
         private readonly IReadOnlyCollection<Card> cards;
 
@@ -26,7 +28,7 @@ namespace Blef.GameLogic.PokerHands
             return cards.All(table.HasCard);
         }
 
-        protected override long Value => 100000000 * GetSuitValue(suit);
+        protected override long Value => BasicValue * GetSuitValue(suit);
 
         public override string ToString()
         {

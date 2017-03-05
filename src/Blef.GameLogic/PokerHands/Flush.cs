@@ -2,6 +2,7 @@
 {
     public class Flush : PokerHand
     {
+        private const int BasicValue = 1000000;
         private readonly Suit suit;
 
         public Flush(Suit suit)
@@ -14,7 +15,7 @@
             return table.HasSuit(suit);
         }
 
-        protected override long Value => 1000000 * GetSuitValue(suit);
+        protected override long Value => BasicValue * GetSuitValue(suit);
 
         public override string ToString()
         {

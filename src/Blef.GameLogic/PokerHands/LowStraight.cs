@@ -2,6 +2,8 @@
 {
     public class LowStraight : PokerHand
     {
+        private int BasicValue = 1000;
+
         public override bool IsOnTable(Table table)
         {
             return table.HasRank(Rank.Nine) &&
@@ -11,7 +13,7 @@
                    table.HasRank(Rank.King);
         }
 
-        protected override long Value => 1000;
+        protected override long Value => BasicValue;
 
         public override string ToString()
         {

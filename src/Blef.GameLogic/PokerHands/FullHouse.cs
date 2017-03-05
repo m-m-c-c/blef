@@ -5,32 +5,35 @@ namespace Blef.GameLogic.PokerHands
 {
     public class FullHouse : PokerHand
     {
-        private readonly Rank firstRank;
-        private readonly Rank secondRank;
+        private const int BasicValue = 100000;
+        private const int ThreeOfKindValueCoefficient = 10;
 
-        public FullHouse(Rank firstRank, Rank secondRank)
+        private readonly Rank threeOfKindRank;
+        private readonly Rank pairRank;
+
+        public FullHouse(Rank threeOfKindRank, Rank pairRank)
         {
-            if (firstRank == secondRank)
+            if (threeOfKindRank == pairRank)
             {
-                throw new ArgumentException("Both ranks cannot be the same", nameof(secondRank));
+                throw new ArgumentException("Both ranks cannot be the same", nameof(pairRank));
             }
 
-            this.firstRank = firstRank;
-            this.secondRank = secondRank;
+            this.threeOfKindRank = threeOfKindRank;
+            this.pairRank = pairRank;
         }
 
         public override bool IsOnTable(Table table)
         {
-            var firstRankCount = table.GetAllCards().Count(x => x.Rank == firstRank);
-            var secondRankCount = table.GetAllCards().Count(x => x.Rank == secondRank);
+            var firstRankCount = table.GetAllCards().Count(x => x.Rank == threeOfKindRank);
+            var secondRankCount = table.GetAllCards().Count(x => x.Rank == pairRank);
             return firstRankCount >= 3 && secondRankCount >= 2;
         }
 
-        protected override long Value => 100000 + 10 * GetRankValue(firstRank) +  GetRankValue(secondRank);
+        protected override long Value => BasicValue + ThreeOfKindValueCoefficient * GetRankValue(threeOfKindRank) +  GetRankValue(pairRank);
 
         public override string ToString()
         {
-            return $"FullHouse of {firstRank} and {secondRank}";
+            return $"FullHouse of {threeOfKindRank} and {pairRank}";
         }
     }
 }

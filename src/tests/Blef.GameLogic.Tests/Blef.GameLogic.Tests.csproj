@@ -46,7 +46,6 @@
   <ItemGroup>
     <Compile Include="PokerHandsHierarchy\PokerHandHierarchyTest.cs" />
     <Compile Include="PokerHandsPresenceTests.cs" />
-    <Compile Include="PokerHandsHierarchy\TwoPairHandTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PokerHandsHierarchy\TestData\TestPokerHandsGenerator.cs" />
   </ItemGroup>

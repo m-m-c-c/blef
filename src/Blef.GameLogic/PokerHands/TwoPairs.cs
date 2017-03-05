@@ -7,6 +7,8 @@ namespace Blef.GameLogic.PokerHands
     {
         private readonly Rank firstRank;
         private readonly Rank secondRank;
+        private const  int StrongerRankCoefficient = 10;
+        private const int BasicValue = 100;
 
         public TwoPairs(Rank firstRank, Rank secondRank)
         {
@@ -30,7 +32,7 @@ namespace Blef.GameLogic.PokerHands
             get
             {
                 var sortedRankValues = new[] {GetRankValue(firstRank), GetRankValue(secondRank)}.OrderBy(x => x).ToArray();
-                return 100 + 10 * sortedRankValues[1] + sortedRankValues[0];
+                return BasicValue + StrongerRankCoefficient * sortedRankValues[1] + sortedRankValues[0];
             }
         }
 
