@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Blef.GameLogic.PokerHands
 {
-    public class HighStraightFlush:PokerHand
+    public class HighStraightFlush : PokerHand
     {
         private readonly Suit suit;
         private readonly IReadOnlyCollection<Card> cards;
@@ -26,6 +27,18 @@ namespace Blef.GameLogic.PokerHands
             return cards.All(table.HasCard);
         }
 
-        protected override int Value => 1000000000 * GetSuitValue(suit);
+        protected override int GenericPokerHand => 11;
+
+        protected override int CompareWithinSameGenericPokerHand(PokerHand otherPokerHand)
+        {
+            var otherHightStraightFlush = otherPokerHand as HighStraightFlush;
+
+            if (otherHightStraightFlush == null)
+            {
+                throw new InvalidOperationException($"This method can compare only {nameof(PokerHand)} with the same GenericPokerHand value");
+            }
+
+            return suit - otherHightStraightFlush.suit;
+        }
     }
 }

@@ -1,11 +1,15 @@
-﻿HighStraightFlush - duży poker (kolor) 1 000 000 000 *S
-LowStraightFlush -  mały poker (kolor) 100 000 000 *S
-FourOfKind - kareta (wartość) 10 000 000 *R
-Flush - kolor (kolor) 1 000 000 * S
-FullHouse - full (wartość, wartość) 100 000 + 10R1 +R2
-ThreeOfKind - trójka (wartość) 10 000 + R
-HighStraight - duży strit 5 000
-LowStraight - mały strit 1 000
-TwoPairs - dwie pary (wartość, wartość) 100 + R1 + R2
-Pair - para (wartość) 10R
-HighCard - wysoka karta (wartość) R
+﻿GenericPokerHand określa typ układu, kolejność jak poniżej od najmniej (1) do najbardziej ważnego (11).
+Najpierw porównujemy więc GenericPokerHand. Gdy jest równy przechodzimy do porównania PokerHand.CompareWithinSameGenericPokerHand(PokerHand),
+który jest implementowany dla każdego układu. Dla niektórych układów funkcja ta zwraca '0', bo nie już co porównywać, sam układ jest ważny.
+
+1. HighCard - wysoka karta
+2. Pair - para
+3. TwoPairs - dwie pary
+4. LowStraight - mały
+5. HighStraight - duży
+6. ThreeOfKind - trójka
+7. FullHouse - full
+8. Flush - kolor
+9. FourOfKind - kareta
+10. LowStraightFlush -  mały poker
+11. HighStraightFlush - duży poker

@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 
 namespace Blef.GameLogic.PokerHands
 {
@@ -20,6 +21,30 @@ namespace Blef.GameLogic.PokerHands
             return firstRankCount >= 3 && secondRankCount >= 2;
         }
 
-        protected override int Value => 100000 + 10 * GetRankValue(first) +  GetRankValue(second);
+        protected override int GenericPokerHand => 7;
+
+        protected override int CompareWithinSameGenericPokerHand(PokerHand otherPokerHand)
+        {
+            var otherFullHouse = otherPokerHand as FullHouse;
+
+            if (otherFullHouse == null)
+            {
+                throw new InvalidOperationException($"This method can compare only {nameof(PokerHand)} with the same GenericPokerHand value");
+            }
+
+            return CompareWithinSameGenericPokerHand(otherFullHouse);
+        }
+
+        int CompareWithinSameGenericPokerHand(FullHouse otherFullHouse)
+        {
+            int firstRankResult = first - otherFullHouse.first;
+
+            if (firstRankResult == 0)
+            {
+                return second - otherFullHouse.second;
+            }
+
+            return firstRankResult;
+        }
     }
 }
