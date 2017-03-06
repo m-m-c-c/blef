@@ -22,11 +22,15 @@
         Ace
     }
 
+    /// <summary>
+    /// Order of suits taken from https://pl.wikipedia.org/wiki/Blef_(gra)
+    /// (Starszeństwo wartości i kolorów)
+    /// </summary>
     public enum Suit
     {
-        Spades = 1,
-        Hearts,
-        Diamonds,
-        Clubs
+        Clubs = 1, // krajc, trefl
+        Diamonds, // dzwonek, karo
+        Hearts, // czerwa, kier
+        Spades // wina, pik
     }
 }
