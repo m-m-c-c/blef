@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="Card.cs" />
     <Compile Include="CardsGenerator.cs" />
+    <Compile Include="Deck.cs" />
+    <Compile Include="DeckCardsGenerator.cs" />
     <Compile Include="GameHistory.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PlayerBet.cs" />
