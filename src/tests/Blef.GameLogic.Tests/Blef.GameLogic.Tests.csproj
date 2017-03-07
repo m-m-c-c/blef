@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeckTests.cs" />
     <Compile Include="PokerHands\TwoPairHandTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serialization\HigherCardSerializationTests.cs" />
