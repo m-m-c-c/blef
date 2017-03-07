@@ -14,5 +14,16 @@
                 Rank.Ace
             };
         }
+
+        public static Suit[] GetAllSuites()
+        {
+            return new[]
+            {
+                Suit.Clubs,
+                Suit.Diamonds,
+                Suit.Hearts,
+                Suit.Spades
+            };
+        }
     }
 }
