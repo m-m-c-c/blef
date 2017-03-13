@@ -1,4 +1,7 @@
-﻿namespace Blef.GameLogic
+﻿using System;
+using Blef.GameLogic.Utils;
+
+namespace Blef.GameLogic
 {
     public class Card
     {
@@ -9,6 +12,19 @@
         {
             Rank = rank;
             Suit = suit;
+        }
+
+        public static Card DealCard()
+        {
+            Random random = StaticRandom.Instance;
+
+            // It's hardcoded, I know it, you know it, let's leave with it
+            // we can use some reflection here, but it will look more hacky and
+            // this numbers will never change.
+            int randomRank = random.Next(1, 7);
+            int randomSuit = random.Next(1, 5);
+
+            return new Card((Rank) randomRank, (Suit) randomSuit);
         }
     }
 
