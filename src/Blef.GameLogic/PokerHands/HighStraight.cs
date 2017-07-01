@@ -11,11 +11,12 @@
                table.HasRank(Rank.Ace);
         }
 
-        protected override int Value => 5000;
+        protected override int PokerHandRank => 5;
 
-        public override string ToString()
+        protected override int GetInnerRank()
         {
-            return $"HighStraight";
+            // It is not important for this kind of PokerHand
+            return 0;
         }
     }
 }

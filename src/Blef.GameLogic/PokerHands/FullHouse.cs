@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 
 namespace Blef.GameLogic.PokerHands
 {
@@ -20,11 +21,11 @@ namespace Blef.GameLogic.PokerHands
             return firstRankCount >= 3 && secondRankCount >= 2;
         }
 
-        protected override int Value => 100000 + 10 * GetRankValue(first) +  GetRankValue(second);
+        protected override int PokerHandRank => 7;
 
-        public override string ToString()
+        protected override int GetInnerRank()
         {
-            return $"FullHouse of {first} and {second}";
+            return 10 * (int)first + (int)second;
         }
     }
 }

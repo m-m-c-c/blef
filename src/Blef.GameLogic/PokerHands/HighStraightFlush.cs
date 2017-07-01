@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Blef.GameLogic.PokerHands
 {
-    public class HighStraightFlush:PokerHand
+    public class HighStraightFlush : PokerHand
     {
         private readonly Suit suit;
         private readonly IReadOnlyCollection<Card> cards;
@@ -26,11 +26,11 @@ namespace Blef.GameLogic.PokerHands
             return cards.All(table.HasCard);
         }
 
-        protected override int Value => 1000000000 * GetSuitValue(suit);
+        protected override int PokerHandRank => 11;
 
-        public override string ToString()
+        protected override int GetInnerRank()
         {
-            return $"HighStraightFlush of {suit}";
+            return (int)suit;
         }
     }
 }

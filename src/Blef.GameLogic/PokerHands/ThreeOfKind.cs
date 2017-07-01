@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 
 namespace Blef.GameLogic.PokerHands
 {
@@ -16,11 +17,11 @@ namespace Blef.GameLogic.PokerHands
             return table.GetAllCards().Count(x => x.Rank == rank) >= 3;
         }
 
-        protected override int Value => 10000 + 3* GetRankValue(rank);
+        protected override int PokerHandRank => 6;
 
-        public override string ToString()
+        protected override int GetInnerRank()
         {
-            return $"ThreeOfKind of {rank}";
+            return (int)rank;
         }
     }
 }

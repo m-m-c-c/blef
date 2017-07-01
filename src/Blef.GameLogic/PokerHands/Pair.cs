@@ -16,11 +16,11 @@ namespace Blef.GameLogic.PokerHands
             return table.GetAllCards().Count(x => x.Rank == rank) >= 2;
         }
 
-        protected override int Value => 10 * GetRankValue(rank);
+        protected override int PokerHandRank => 2;
 
-        public override string ToString()
+        protected override int GetInnerRank()
         {
-            return $"Pair of {rank}";
+            return (int)rank;
         }
     }
 }

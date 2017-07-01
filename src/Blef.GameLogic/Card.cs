@@ -14,7 +14,7 @@
 
     public enum Rank
     {
-        Nine=1,
+        Nine = 1,
         Ten,
         Jack,
         Queen,

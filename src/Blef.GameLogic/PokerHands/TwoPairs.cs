@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 
 namespace Blef.GameLogic.PokerHands
 {
@@ -9,6 +10,11 @@ namespace Blef.GameLogic.PokerHands
 
         public TwoPairs(Rank first, Rank second)
         {
+            if (first <= second)
+            {
+                throw new ArgumentException($"First pair '{first}' has to be greater than second pair '{second}'");
+            }
+
             this.first = first;
             this.second = second;
         }
@@ -20,11 +26,11 @@ namespace Blef.GameLogic.PokerHands
             return firstRankCount >= 2 && secondRankCount >= 2;
         }
 
-        protected override int Value => 100 + GetRankValue(first) + GetRankValue(second);
+        protected override int PokerHandRank => 3;
 
-        public override string ToString()
+        protected override int GetInnerRank()
         {
-            return $"TwoPairs od {first} and {second}";
+            return 10 * (int)first + (int)second;
         }
     }
 }

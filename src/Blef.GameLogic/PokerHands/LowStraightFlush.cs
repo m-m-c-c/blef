@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Blef.GameLogic.PokerHands
@@ -26,12 +27,11 @@ namespace Blef.GameLogic.PokerHands
             return cards.All(table.HasCard);
         }
 
-        protected override int Value => 100000000 * GetSuitValue(suit);
+        protected override int PokerHandRank => 10;
 
-        public override string ToString()
+        protected override int GetInnerRank()
         {
-            return $"LowStraightFlush of {suit}";
+            return (int)suit;
         }
-
     }
 }

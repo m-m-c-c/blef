@@ -1,10 +1,9 @@
-﻿
-namespace Blef.GameLogic.PokerHands
+﻿namespace Blef.GameLogic.PokerHands
 {
     public class HighCard : PokerHand
     {
         private readonly Rank rank;
-        
+
         public HighCard(Rank rank)
         {
             this.rank = rank;
@@ -15,11 +14,11 @@ namespace Blef.GameLogic.PokerHands
             return table.HasRank(rank);
         }
 
-        protected override int Value => GetRankValue(rank);
+        protected override int PokerHandRank => 1;
 
-        public override string ToString()
+        protected override int GetInnerRank()
         {
-            return $"HighCard of {rank}";
+            return (int)rank;
         }
     }
 }

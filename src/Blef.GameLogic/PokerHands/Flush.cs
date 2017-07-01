@@ -14,11 +14,11 @@
             return table.HasSuit(suit);
         }
 
-        protected override int Value => 1000000 * GetSuitValue(suit);
+        protected override int PokerHandRank => 8;
 
-        public override string ToString()
+        protected override int GetInnerRank()
         {
-            return $"Flush of {suit}";
+            return (int)suit;
         }
     }
 }
