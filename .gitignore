@@ -1,5 +1,9 @@
+# The following command works for downloading when using Git for Windows:
+# curl -LOf http://gist.githubusercontent.com/kmorcinek/2710267/raw/.gitignore
+#
 # Download this file using PowerShell v3 under Windows with the following comand:
 # Invoke-WebRequest https://gist.githubusercontent.com/kmorcinek/2710267/raw/ -OutFile .gitignore
+#
 # or wget:
 # wget --no-check-certificate http://gist.githubusercontent.com/kmorcinek/2710267/raw/.gitignore
 
@@ -9,13 +13,13 @@
 *.sln.docstates
 
 # Build results
-
 [Dd]ebug/
 [Rr]elease/
 x64/
-build/
 [Bb]in/
 [Oo]bj/
+# build folder is nowadays used for build scripts and should not be ignored
+#build/
 
 # NuGet Packages
 *.nupkg
@@ -51,12 +55,7 @@ build/
 *.vssscc
 .builds
 *.pidb
-*.log
 *.scc
-
-# OS generated files #
-.DS_Store*
-Icon?
 
 # Visual C++ cache files
 ipch/
@@ -144,11 +143,17 @@ UpgradeLog*.htm
 *.txt~
 *.swp
 *.swo
+
+# Temp files when opening LibreOffice on ubuntu
+.~lock.*
  
 # svn
 .svn
 
-# Remainings from resolvings conflicts in Source Control
+# CVS - Source Control
+**/CVS/
+
+# Remainings from resolving conflicts in Source Control
 *.orig
 
 # SQL Server files
@@ -176,6 +181,9 @@ Desktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
+# OS generated files #
+Icon?
+
 # Mac desktop service store files
 .DS_Store
 
@@ -188,7 +196,30 @@ $RECYCLE.BIN/
 # Visual Studio temp something
 .vs/
 
+# dotnet stuff
+project.lock.json
+
+# VS 2015+
+*.vc.vc.opendb
+*.vc.db
+
+# Rider
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Output folder used by Webpack or other FE stuff
 **/node_modules/*
+**/wwwroot/*
+
+# SpecFlow specific
+*.feature.cs
+*.feature.xlsx.*
+*.Specs_*.html
+
+# UWP Projects
+AppPackages/
 
 #####
 # End of core ignore list, below put you custom 'per project' settings (patterns or path)
